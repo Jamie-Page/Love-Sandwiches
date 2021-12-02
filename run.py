@@ -2,7 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from pprint import pprint
 
-SCOPE = [
+SSCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
@@ -66,6 +66,7 @@ def update_sales_worksheet(data):
     print("Sales worksheet updated successfully.\n")
 
 
+<<<<<<< HEAD
 def calculate_surplus_data(sales_row):
     """
     Compare sales with stock and calculate the surplus for each item type.
@@ -91,3 +92,8 @@ def main():
 
 print("Welcome to Love Sandwiches Data Automation")
 main()
+=======
+data = get_sales_data()
+sales_data = [int(num) for num in data]
+update_sales_worksheet(sales_data)
+>>>>>>> 36700e3e71dcd8982e29851275f3a4bef6309712
